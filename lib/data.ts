@@ -1,8 +1,3 @@
-// This file mirrors the shape of the data that will eventually come from
-// your Express + MongoDB API (GET /api/about, /api/projects, etc).
-// Swap each constant below for a `fetch()` call once the backend is ready —
-// component code will not need to change.
-
 export const about = {
   name: "Munna",
   role: "Full-Stack Developer",
@@ -13,8 +8,9 @@ export const about = {
     "Most of my recent work has been deep in Laravel — integrating GDS/flight-booking providers, building admin dashboards, and untangling gnarly business logic. This site is my first full Next.js + Express build, made to show that range."
   ],
   location: "Gazipur, Dhaka, Bangladesh",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: null as string | null,
   email: "hello@example.com",
+  photo: "/my-image.png",
   socials: [
     { label: "GitHub", url: "https://github.com/yourhandle" },
     { label: "LinkedIn", url: "https://linkedin.com/in/yourhandle" },
@@ -29,6 +25,7 @@ export type Project = {
   techStack: string[];
   year: string;
   status: "Live" | "In progress" | "Archived";
+  screenshot?: string;
 };
 
 export const projects: Project[] = [
@@ -39,7 +36,8 @@ export const projects: Project[] = [
       "A Laravel booking engine unifying Sabre and Riya GDS providers behind one consistent fare and checkout flow.",
     techStack: ["Laravel", "Blade", "Tailwind CSS", "MySQL"],
     year: "2026",
-    status: "Live"
+    status: "Live",
+    screenshot: "/project-1.png"
   },
   {
     slug: "bkash-nagad-gateway",
@@ -48,7 +46,8 @@ export const projects: Project[] = [
       "A WooCommerce plugin adding native bKash and Nagad checkout for Bangladeshi merchants.",
     techStack: ["PHP", "WordPress", "WooCommerce API"],
     year: "2026",
-    status: "In progress"
+    status: "In progress",
+    screenshot: "/project-2.png"
   },
   {
     slug: "school-management-saas",
@@ -57,8 +56,16 @@ export const projects: Project[] = [
       "A multi-tenant SaaS for attendance, fees, and result tracking, built for local coaching centers.",
     techStack: ["Laravel", "MySQL", "Alpine.js"],
     year: "2026",
-    status: "In progress"
+    status: "In progress",
+    screenshot: "/project-3.png"
   }
+];
+
+export const projectScreenshots = [
+  { src: "/project-1.png", alt: "Flight Booking Dashboard" },
+  { src: "/project-2.png", alt: "Payment Gateway Plugin" },
+  { src: "/project-3.png", alt: "School Management SaaS" },
+  { src: "/project-4.png", alt: "Additional Project Screenshot" }
 ];
 
 export type ExperienceItem = {

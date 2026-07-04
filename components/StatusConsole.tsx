@@ -7,6 +7,7 @@ const sections = [
   { id: "top", path: "/", ms: 12 },
   { id: "about", path: "/about", ms: 38 },
   { id: "projects", path: "/projects", ms: 51 },
+  { id: "showcase", path: "/projects/screenshots", ms: 73 },
   { id: "experience", path: "/experience", ms: 29 },
   { id: "skills", path: "/skills", ms: 17 },
   { id: "contact", path: "/contact", ms: 44 }

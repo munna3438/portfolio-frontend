@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import HashScrollHandler from "@/components/HashScrollHandler";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${fraunces.variable} ${inter.variable} ${jbmono.variable} font-body antialiased`}
       >
         {children}
+        <HashScrollHandler />
       </body>
     </html>
   );
